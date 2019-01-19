@@ -16,7 +16,7 @@ $factory->define(House::class, function (Faker $faker) {
         'contract_type' => array_rand(array_flip(['short','mid','long'])), 
         'rating' => $faker->numberBetween(1,5), 
         'house_quality' => array_rand(array_flip(['bad','good','great'])),
-        'price' => $faker->numberBetween(10000, 100000) * 100, 
+        'price' => $faker->numberBetween(10000, 100000), 
         'status' => rand(0,1)
     ];
 });
