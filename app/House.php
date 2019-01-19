@@ -7,6 +7,12 @@ use App\Modules\Houses\Filters\RunFilters;
 
 class House extends Model
 {
+    protected $hidden = ['created_at', 'updated_at'];
+
+    /***************************************************************************************
+     ** MODS
+     ***************************************************************************************/
+
     protected function setPriceAttribute($value)
     {
         $this->attributes['price'] = $value * 100; 
@@ -20,6 +26,10 @@ class House extends Model
 
         return $value/100; 
     }
+
+    /***************************************************************************************
+     ** Search
+     ***************************************************************************************/
 
     public static function search()
     {

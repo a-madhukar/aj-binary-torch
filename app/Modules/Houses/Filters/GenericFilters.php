@@ -6,6 +6,10 @@ class GenericFilters
 {
     public $query; 
 
+    /**
+     * Left column = parameters passed in via the url 
+     * Right column = query type | column_name | min_parameter
+     */
     protected $filters = [
         'quality' => 'equals|house_quality|', 
         'contract_type' => 'equals|contract_type|', 

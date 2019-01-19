@@ -9,8 +9,6 @@ class HousesController extends Controller
 {
     public function index()
     { 
-        return response()->json([
-            'data' => House::search()->get()
-        ], 200); 
+        return House::search()->paginate(20); 
     }
 }
